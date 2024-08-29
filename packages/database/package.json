@@ -1,0 +1,12 @@
+{
+    "name": "@repo/db",
+    "version": "0.0.0",
+    "dependencies": {
+      "@prisma/client": "5.19.0",
+      "@zenstackhq/runtime": "2.4.1"
+    },
+    "devDependencies": {
+      "prisma": "5.19.0",
+      "zenstack": "2.4.1"
+    }
+  }
