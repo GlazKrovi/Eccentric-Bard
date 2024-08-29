@@ -14,10 +14,9 @@
 
 # Future versions
 
-- framework replacement
+- framework replacement (in the event of a problem)
 
-  - Qwik city (enhance qwik) or
-  - Astro (to replace wqik in the event of a problem) with
+  - Astro with
     - react
     - react redux
     - chackra / nextui
