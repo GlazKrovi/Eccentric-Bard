@@ -1,0 +1,39 @@
+@startuml
+
+interface Config {
+  id: Int
+  projectId: Int
+  project: Project
+}
+
+interface Image {
+  id: Int
+  path: String
+  project: Project[]
+}
+
+interface Genre {
+  id: Int
+  label: String
+  project: Project[]
+}
+
+interface Project {
+  id: Int
+  title: String
+  description: String
+  coverId: Int
+  genreId: Int
+
+  cover: Image
+  genre: Genre
+  config: Config[]
+}
+
+Config -- Project : project
+Image -- Project : project
+Genre -- Project : project
+Project -- Image : cover
+Project -- Genre : genre
+
+@enduml
