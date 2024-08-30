@@ -5,45 +5,32 @@
  */
 datasource db {
     provider = 'sqlite'
-    url = 'file:./dev.db'
+    url = 'file./dev.db'
 }
 
 generator client {
     provider = "prisma-client-js"
 }
 
-/**
- * User model
- */
-model User {
-    id       String @id @default(cuid())
-    email    String @unique @email @length(6, 32)
-    password String @password @omit
-    posts    Post[]
-
-    // everybody can signup
-    @@allow('create', true)
-
-    // full access by self
-    @@allow('all', auth() == this)
+model  Image {
+    id      Int       @id @default(autoincrement())
+    path    String    @trim
+    project Project[]
 }
 
-/**
- * Post model
- */
-model Post {
-    id        String   @id @default(cuid())
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-    title     String   @length(1, 256)
-    content   String
-    published Boolean  @default(false)
-    author    User     @relation(fields: [authorId], references: [id])
-    authorId  String
-
-    // allow read for all signin users
-    @@allow('read', auth() != null && published)
-
-    // full access by author
-    @@allow('all', author == auth())
+model Genre {
+    id      Int       @id @default(autoincrement())
+    label   String    @trim
+    project Project[]
 }
+
+model Project {
+    id          Int    @id @default(autoincrement())
+    title       String @trim
+    description String @trim
+    coverId     Int
+    genreId     Int
+    cover       Image  @relation(fields: [coverId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+    genre       Genre  @relation(fields: [genreId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+}
+
