@@ -5,10 +5,13 @@
     "db:generate": {
       "cache": false
     },
+    "db:seed": {
+      "cache": false
+    },
     "build": {
       "dependsOn": ["^lint", "^db:generate", "^db:seed"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "outputs": []
     },
     "lint": {
       "dependsOn": ["^lint"]
