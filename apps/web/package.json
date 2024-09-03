@@ -27,15 +27,14 @@
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@repo/db": "workspace:*",
     "@builder.io/qwik": "^1.8.0",
     "@builder.io/qwik-city": "^1.8.0",
+    "@repo/db": "workspace:*",
     "@repo/eslint-config": "workspace:*",
     "@repo/prettier-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "undici": "6.19.8",
-    "vite": "5.3.5",
-    "vite-tsconfig-paths": "^4.2.1"
+    "vite": "5.4.2",
+    "vite-tsconfig-paths": "^5.0.1"
   }
 }
-

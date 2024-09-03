@@ -9,7 +9,7 @@
       "cache": false
     },
     "build": {
-      "dependsOn": ["^lint", "^db:generate", "^db:seed"],
+      "dependsOn": ["^lint"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": []
     },

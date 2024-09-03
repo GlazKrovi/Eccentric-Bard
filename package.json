@@ -8,15 +8,14 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "turbo": "^2.1.0",
-    "typedoc": "^0.26.6",
-    "@repo/prettier-config": "workspace:*",
     "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*"
+    "@repo/prettier-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "turbo": "^2.1.1",
+    "typedoc": "^0.26.6"
   },
   "packageManager": "pnpm@8.15.6",
   "engines": {
     "node": ">=18"
   }
 }
-

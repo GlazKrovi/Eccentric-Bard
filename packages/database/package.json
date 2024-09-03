@@ -11,12 +11,12 @@
     ".": "./index.ts"
   },
   "dependencies": {
-    "@prisma/client": "5.19.0",
+    "@prisma/client": "5.19.1",
     "@zenstackhq/runtime": "2.4.1"
   },
   "devDependencies": {
-    "prisma": "5.19.0",
-    "zenstack": "2.4.1",
-    "tsx": "^4.19.0"
+    "prisma": "5.19.1",
+    "tsx": "^4.19.0",
+    "zenstack": "2.4.1"
   }
 }
