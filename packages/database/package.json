@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "db:generate": "zenstack generate",
-    "gen": "zenstack generate"
+    "gen": "zenstack generate",
+    "db:seed": "tsx seed.ts"
   },
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./index.ts"
   },
   "dependencies": {
     "@prisma/client": "5.19.0",
