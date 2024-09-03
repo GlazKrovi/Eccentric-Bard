@@ -2,10 +2,8 @@
   "name": "@repo/prettier-config",
   "version": "0.0.0",
   "private": true,
-  "devDependencies": {
-    "@repo/typescript-config": "workspace:*"
-  },
   "dependencies": {
     "prettier": "^3.3.3"
   }
 }
+
