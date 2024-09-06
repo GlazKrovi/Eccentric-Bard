@@ -6,7 +6,8 @@
       "cache": false
     },
     "db:seed": {
-      "cache": false
+      "cache": false,
+      "dependsOn": ["^db:generate"]
     },
     "build": {
       "dependsOn": ["^lint"],
