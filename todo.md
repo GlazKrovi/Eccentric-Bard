@@ -1,3 +1,1 @@
-fix '404 not found on nginx'
-
-use docker
+use docker fro web app AND nginx

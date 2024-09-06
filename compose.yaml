@@ -1,0 +1,18 @@
+services:
+  nginx:
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - 3000:80
+  frontend:
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./apps/web
+    volumes:
+      - /apps/web
+    environment:
+      - NODE_ENV=development
+
