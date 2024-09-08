@@ -1,9 +1,12 @@
 services:
-  nginx:
+  web-app:
+    stdin_open: true
     build:
       context: .
-      dockerfile: ./nginx/Dockerfile
+      dockerfile: ./Dockerfile
+    expose:
+      - 8080
     ports:
-      - "80:80"
+      - 8080:8080
     restart: always
 
